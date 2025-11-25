@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Auto closing in 5 seconds -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closing...</title>
+    <script>
+      setTimeout(() => {
+        window.close();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <p id="message" style="display: none;"></p>
+    <p id ="error" style="display: none; color: darkred;"></p>
+    <p>Ora puoi chiudere questa finestra.<br>(Si chiuderà automaticamente in 5 secondi)</p>
+    <script>
+        // show error or message
+        const params = new URLSearchParams(window.location.search);
+        const message = params.get("message");
+        if (message) {
+            const messageElement = document.getElementById("message");
+            messageElement.style.display = "block";
+            messageElement.textContent = message;
+        }
+        const error = params.get("error");
+        if (error) {
+            const errorElement = document.getElementById("error");
+            errorElement.style.display = "block";
+            errorElement.textContent = error;
+        }
+    </script>
+  </body>
+</html>
