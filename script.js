@@ -9,11 +9,11 @@
   initializeCalendar();
 
   const GOOGLE_CLIENT_ID =
-    "203366866884-2v8pvrqc6h5n6krlje9729dbnf539f7k.apps.googleusercontent.com";
+    "203366866884-rpktp207c5kp5v1f6n8hg92hmou1p56v.apps.googleusercontent.com";
   const GOOGLE_SCOPES = "openid email profile";
   const GOOGLE_AUTH_ENDPOINT = "https://accounts.google.com/o/oauth2/v2/auth";
   const GOOGLE_REDIRECT_URI =
-    "https://n8n.delugan.net/webhook/juvenes/collettaalimentare/callback";
+    "https://n8n.delugan.net/webhook/juvenes/mercatinonatale/callback";
 
   const fullDateFormatter = new Intl.DateTimeFormat("it-IT", {
     weekday: "long",
@@ -116,7 +116,7 @@
 
     if (!groupedSlots.length) {
       renderPlaceholderMessage(
-        "Al momento non ci sono turni disponibili per la Colletta Alimentare."
+        "Al momento non ci sono turni disponibili per la Mercatino di Natale."
       );
       return;
     }
@@ -375,7 +375,7 @@
 
   async function fetchAvailabilityData() {
     const endpoint =
-      "https://n8n.delugan.net/webhook/juvenes/collettaalimentare/slots";
+      "https://n8n.delugan.net/webhook/juvenes/mercatinonatale/slots";
 
     const response = await fetch(endpoint, {
       headers: {
