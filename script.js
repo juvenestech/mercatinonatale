@@ -9,7 +9,7 @@
   initializeCalendar();
 
   const GOOGLE_CLIENT_ID =
-    "203366866884-rpktp207c5kp5v1f6n8hg92hmou1p56v.apps.googleusercontent.com";
+    "529145784780-9oltgi13lg1u7srjp8empl2boe9q4b19.apps.googleusercontent.com";
   const GOOGLE_SCOPES = "openid email profile";
   const GOOGLE_AUTH_ENDPOINT = "https://accounts.google.com/o/oauth2/v2/auth";
   const GOOGLE_REDIRECT_URI =
